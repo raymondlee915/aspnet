@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag lijinch-aspnet:latest; &&
-           cat ~/GH_TOKEN.txt | docker login docker.pkg.github.com -u raymondlee915 --password-stdin &&
-           docker tag lijinch-aspnet:latest docker.pkg.github.com/raymondlee915/aspnet/lijinch-aspnet:latest;&&
+      run: docker build . --file Dockerfile --tag lijinch-aspnet:latest;
+           cat ~/GH_TOKEN.txt | docker login docker.pkg.github.com -u raymondlee915 --password-stdin;
+           docker tag lijinch-aspnet:latest docker.pkg.github.com/raymondlee915/aspnet/lijinch-aspnet:latest;
            docker push docker.pkg.github.com/raymondlee915/aspnet/lijinch-aspnet:latest
