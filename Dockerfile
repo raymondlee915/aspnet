@@ -1,4 +1,4 @@
-FROM itdf-hub.mercedes-benz-finance.com.cn/mbafc-postsales-ocr/aspnet:3.1-bionic
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-bionic
 
 ## start installing sqlcmd
 ARG MSSQLTOOLS_VERSION=17.4.1.1-1
