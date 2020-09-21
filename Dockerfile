@@ -22,7 +22,7 @@ ENV LANG="en_US.UTF-8" LANGUAGE="en_US.UTF-8" LC_ALL="en_US.UTF-8"
 
 ADD netcoreapp/ /app/
 WORKDIR /app
-EXPOSE 5000
+EXPOSE 80
 ENV ASPNETCORE_ENVIRONMENT=Development
 #ENV NCIIC__License="N/A"
 CMD /bin/bash -c "dotnet ASPNETCoreTest.dll"
