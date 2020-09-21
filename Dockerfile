@@ -20,8 +20,7 @@ RUN apt-get update \
 ENV LANG="en_US.UTF-8" LANGUAGE="en_US.UTF-8" LC_ALL="en_US.UTF-8"
 ## end installing sqlcmd
 
-ADD /app/
-COPY ./netcoreapp /app/
+ADD netcoreapp/ /app/
 WORKDIR /app
 EXPOSE 5000
 ENV ASPNETCORE_ENVIRONMENT=Development
