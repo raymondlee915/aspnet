@@ -20,7 +20,7 @@ RUN apt-get update \
 ENV LANG="en_US.UTF-8" LANGUAGE="en_US.UTF-8" LC_ALL="en_US.UTF-8"
 ## end installing sqlcmd
 
-ADD linux-64/ /app/
+ADD /app/
 COPY ./netcoreapp /app/
 WORKDIR /app
 EXPOSE 5000
