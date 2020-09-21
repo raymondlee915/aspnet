@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag lijinch-aspnet:latest;
-           docker login -u raymondlee915 -p af5338999db4ee5ddca1c58a05056cc660bd219d docker.pkg.github.com;
+           docker login -u raymondlee915 -p ${{PKGTOKEN}} docker.pkg.github.com;
            docker tag lijinch-aspnet:latest docker.pkg.github.com/raymondlee915/aspnet/lijinch-aspnet:latest;
            docker push docker.pkg.github.com/raymondlee915/aspnet/lijinch-aspnet:latest
